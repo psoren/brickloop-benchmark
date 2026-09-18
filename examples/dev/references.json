@@ -1,0 +1,289 @@
+{
+  "stack-a": [
+    {
+      "id": "a",
+      "part": "brick-2x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        0,
+        0
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "b",
+      "part": "brick-2x2",
+      "color": "blue",
+      "position_mm": [
+        0,
+        0,
+        9.6
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "c",
+      "part": "brick-2x2",
+      "color": "yellow",
+      "position_mm": [
+        0,
+        0,
+        19.2
+      ],
+      "yaw_deg": 0
+    }
+  ],
+  "stack-b": [
+    {
+      "id": "0",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        0,
+        0.0
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "1",
+      "part": "brick-1x2",
+      "color": "blue",
+      "position_mm": [
+        0,
+        0,
+        9.6
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "2",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        0,
+        19.2
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "3",
+      "part": "brick-1x2",
+      "color": "blue",
+      "position_mm": [
+        0,
+        0,
+        28.799999999999997
+      ],
+      "yaw_deg": 0
+    }
+  ],
+  "bridge-a": [
+    {
+      "id": "a",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        -12,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "b",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        12,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "c",
+      "part": "plate-2x4",
+      "color": "blue",
+      "position_mm": [
+        0,
+        0,
+        9.6
+      ],
+      "yaw_deg": 0
+    }
+  ],
+  "bridge-b": [
+    {
+      "id": "0",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        -12,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "1",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        12,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "2",
+      "part": "brick-1x2",
+      "color": "yellow",
+      "position_mm": [
+        0,
+        -12,
+        9.6
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "3",
+      "part": "brick-1x2",
+      "color": "yellow",
+      "position_mm": [
+        0,
+        12,
+        9.6
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "top",
+      "part": "plate-2x4",
+      "color": "blue",
+      "position_mm": [
+        0,
+        0,
+        19.2
+      ],
+      "yaw_deg": 0
+    }
+  ],
+  "repeat-a": [
+    {
+      "id": "0",
+      "part": "brick-1x1",
+      "color": "red",
+      "position_mm": [
+        -12,
+        0,
+        0
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "1",
+      "part": "brick-1x1",
+      "color": "blue",
+      "position_mm": [
+        -12,
+        0,
+        9.6
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "2",
+      "part": "brick-1x1",
+      "color": "red",
+      "position_mm": [
+        12,
+        0,
+        0
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "id": "3",
+      "part": "brick-1x1",
+      "color": "blue",
+      "position_mm": [
+        12,
+        0,
+        9.6
+      ],
+      "yaw_deg": 0
+    }
+  ],
+  "repeat-b": [
+    {
+      "id": "0",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        -24,
+        0,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "1",
+      "part": "brick-1x2",
+      "color": "blue",
+      "position_mm": [
+        -24,
+        0,
+        9.6
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "2",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        0,
+        0,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "3",
+      "part": "brick-1x2",
+      "color": "blue",
+      "position_mm": [
+        0,
+        0,
+        9.6
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "4",
+      "part": "brick-1x2",
+      "color": "red",
+      "position_mm": [
+        24,
+        0,
+        0
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "id": "5",
+      "part": "brick-1x2",
+      "color": "blue",
+      "position_mm": [
+        24,
+        0,
+        9.6
+      ],
+      "yaw_deg": 90
+    }
+  ]
+}

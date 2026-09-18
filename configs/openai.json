@@ -1,0 +1,8 @@
+{
+  "provider": "openai",
+  "model": "REPLACE_WITH_EXACT_MODEL_ID",
+  "max_output_tokens": 4096,
+  "max_actions": 64,
+  "timeout_seconds": 120,
+  "api_key_env": "OPENAI_API_KEY"
+}

@@ -1,0 +1,7 @@
+{
+  "provider": "noop",
+  "model": "instruction-ignoring-noop",
+  "max_output_tokens": 4096,
+  "max_actions": 64,
+  "timeout_seconds": 120
+}

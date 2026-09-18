@@ -1,0 +1,135 @@
+{
+  "schema": "upright-v1",
+  "cases": [
+    {
+      "id": "stack-a",
+      "family": "stacking",
+      "source": "authored-text-development-fixture",
+      "instructions": "Stack three brick-2x2 pieces centered at x=0,y=0: red bottom at z=0, blue bottom at z=9.6, yellow bottom at z=19.2. All yaw 0.",
+      "inventory": [
+        {
+          "part": "brick-2x2",
+          "color": "red",
+          "count": 1
+        },
+        {
+          "part": "brick-2x2",
+          "color": "blue",
+          "count": 1
+        },
+        {
+          "part": "brick-2x2",
+          "color": "yellow",
+          "count": 1
+        }
+      ],
+      "seed": [],
+      "images": []
+    },
+    {
+      "id": "stack-b",
+      "family": "stacking",
+      "source": "authored-text-development-fixture",
+      "instructions": "Stack four brick-1x2 pieces centered at x=0,y=0, yaw 0: red, blue, red, blue from bottom upward. Bottom brick rests on z=0, each subsequent bottom is 9.6 mm higher.",
+      "inventory": [
+        {
+          "part": "brick-1x2",
+          "color": "red",
+          "count": 2
+        },
+        {
+          "part": "brick-1x2",
+          "color": "blue",
+          "count": 2
+        }
+      ],
+      "seed": [],
+      "images": []
+    },
+    {
+      "id": "bridge-a",
+      "family": "bridges",
+      "source": "authored-text-development-fixture",
+      "instructions": "Place two red brick-1x2 supports at [0,-12,0] and [0,12,0], both yaw 90. Add one blue plate-2x4 centered at [0,0,9.6], yaw 0.",
+      "inventory": [
+        {
+          "part": "brick-1x2",
+          "color": "red",
+          "count": 2
+        },
+        {
+          "part": "plate-2x4",
+          "color": "blue",
+          "count": 1
+        }
+      ],
+      "seed": [],
+      "images": []
+    },
+    {
+      "id": "bridge-b",
+      "family": "bridges",
+      "source": "authored-text-development-fixture",
+      "instructions": "Build two supports at x=0, y=-12 and y=12. Each has a red brick-1x2 at z=0 and a yellow brick-1x2 at z=9.6, all yaw 90. Span both with a blue plate-2x4 at [0,0,19.2], yaw 0.",
+      "inventory": [
+        {
+          "part": "brick-1x2",
+          "color": "red",
+          "count": 2
+        },
+        {
+          "part": "brick-1x2",
+          "color": "yellow",
+          "count": 2
+        },
+        {
+          "part": "plate-2x4",
+          "color": "blue",
+          "count": 1
+        }
+      ],
+      "seed": [],
+      "images": []
+    },
+    {
+      "id": "repeat-a",
+      "family": "repeated-subassemblies",
+      "source": "authored-text-development-fixture",
+      "instructions": "Make two identical towers centered at x=-12 and x=12, both y=0. Each has a red brick-1x1 at z=0 and a blue brick-1x1 at z=9.6. Use yaw 0 throughout.",
+      "inventory": [
+        {
+          "part": "brick-1x1",
+          "color": "red",
+          "count": 2
+        },
+        {
+          "part": "brick-1x1",
+          "color": "blue",
+          "count": 2
+        }
+      ],
+      "seed": [],
+      "images": []
+    },
+    {
+      "id": "repeat-b",
+      "family": "repeated-subassemblies",
+      "source": "authored-text-development-fixture",
+      "instructions": "Make three identical towers at x=-24,0,24, all y=0. Each consists of one red brick-1x2 at z=0 and one blue brick-1x2 at z=9.6. All yaw 90.",
+      "inventory": [
+        {
+          "part": "brick-1x2",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "part": "brick-1x2",
+          "color": "blue",
+          "count": 3
+        }
+      ],
+      "seed": [],
+      "images": []
+    }
+  ]
+}

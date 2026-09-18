@@ -4,7 +4,7 @@
 
 Version 0.1 · September 17, 2026 · Design draft
 
-This document proposes an evaluation protocol. The benchmark dataset, evaluator, and model baselines have not been released. Numerical corpus sizes below are planning targets, not collected data or experimental results.
+This document proposes the full evaluation protocol. A narrow [development contract and scorer](CONTRACT.md) and [model runner](RUNNER.md) are now implemented, with six text-only fixtures. The validated visual dataset, full evaluator, and paid model baselines have not been released. Numerical corpus sizes below are planning targets, not collected data or experimental results. Current implementation limits are documented in CONTRACT.md; the full geometry and interaction protocol below remains the target design.
 
 ## 1. The question we want to answer
 
@@ -156,6 +156,6 @@ These tasks have different inputs and scoring contracts. Their published percent
 
 The recommended source strategy is hybrid; the exact first builds, train/evaluation allocation, rendering style, pose tolerances, part vocabulary, inference budget, and human-baseline protocol remain to be fixed. Proposed corpus sizes and piece bands should change if reference verification or pilot behavior shows they are inappropriate.
 
-Next deliverables, in order: frozen protocol and scorer fixtures; verified pilot manifest; isolated runner and three task adapters; baseline runs with traces; public results and a larger challenge pool.
+Completed development slice: upright placement/action contract, positive/negative scorer tests, and a single-response hosted-API runner. Next deliverables, in order: independently verified visual pilot manifest; sequential isolated runner and three task adapters; baseline runs with traces; public results and a larger challenge pool. Text-only harness fixtures are not the visual pilot.
 
 This repository publishes original proposal text and a schematic illustration. Future releases should publish source links, provenance, and only assets with verified redistribution permission. It currently includes no official instruction PDFs or third-party model files. LEGO is a trademark of the LEGO Group; this independent project is not affiliated with or endorsed by the LEGO Group.

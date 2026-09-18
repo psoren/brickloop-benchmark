@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="A proposal for testing whether AI can follow a LEGO manual, complete the build, and recover from mistakes. Real manuals. Controlled generated builds. One growing curriculum.">
+  <title>Brickloop Benchmark — From instructions to understanding</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#" aria-label="Brickloop Benchmark home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>brickloop<span class="wordmark-sub">/ benchmark</span></a>
+    <nav aria-label="Main navigation"><a href="#tasks">The tasks</a><a href="#corpus">The builds</a><a href="#protocol">The protocol</a><a class="repo-link" href="https://github.com/psoren/brickloop-benchmark">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Research proposal · v0.1 · September 2026</p>
+        <h1>From instructions<br>to <em>understanding.</em></h1>
+        <p class="hero-lede">Can an AI follow a LEGO manual, finish the build, and recover from its mistakes?</p>
+        <p class="hero-description">A benchmark proposal for spatial reasoning across an entire build. Read the page. Place the pieces. Keep going when something goes wrong.</p>
+        <div class="hero-actions"><a class="button primary" href="#tasks">Explore the proposal <span aria-hidden="true">↓</span></a><a class="text-link" href="PROPOSAL.md" download>Download the full draft <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-label"><span>INSTRUCTION → ASSEMBLY</span><span>FIG. 01</span></div>
+        <svg class="assembly" viewBox="0 0 520 405">
+          <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#c5c7c1"/></pattern></defs>
+          <rect width="520" height="405" fill="url(#grid)"/>
+          <path d="M65 307 260 194 454 307 260 420Z" fill="#dedfd7" opacity=".35"/>
+          <g stroke="#24483c" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M100 267 260 175 420 267 260 359Z" fill="#8cac93"/><path d="M100 267 260 359 260 381 100 289Z" fill="#547660"/><path d="M260 359 420 267 420 289 260 381Z" fill="#385d4b"/>
+          </g>
+          <g stroke="#8c3827" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M149 228 221 186 291 227 219 269Z" fill="#ee937b"/><path d="M149 228 219 269 219 316 149 275Z" fill="#c6533c"/><path d="M219 269 291 227 291 274 219 316Z" fill="#a83d2b"/>
+            <ellipse cx="191" cy="220" rx="15" ry="8" fill="#cf644c"/><path d="M176 213v7a15 8 0 0 0 30 0v-7" fill="#d46a50"/><ellipse cx="191" cy="213" rx="15" ry="8" fill="#f1a18b"/>
+            <ellipse cx="225" cy="240" rx="15" ry="8" fill="#cf644c"/><path d="M210 233v7a15 8 0 0 0 30 0v-7" fill="#d46a50"/><ellipse cx="225" cy="233" rx="15" ry="8" fill="#f1a18b"/>
+          </g>
+          <g stroke="#8c3827" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M271 158 343 116 413 157 341 199Z" fill="#ee937b"/><path d="M271 158 341 199 341 246 271 205Z" fill="#c6533c"/><path d="M341 199 413 157 413 204 341 246Z" fill="#a83d2b"/>
+            <path d="M298 143v7a15 8 0 0 0 30 0v-7" fill="#d46a50"/><ellipse cx="313" cy="143" rx="15" ry="8" fill="#f1a18b"/>
+            <path d="M332 163v7a15 8 0 0 0 30 0v-7" fill="#d46a50"/><ellipse cx="347" cy="163" rx="15" ry="8" fill="#f1a18b"/>
+          </g>
+          <g stroke="#244d70" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M146 119 341 6 413 48 218 161Z" fill="#8cb6cf"/><path d="M146 119 218 161 218 183 146 141Z" fill="#487eaa"/><path d="M218 161 413 48 413 70 218 183Z" fill="#315e86"/>
+            <g fill="#a8c8d9"><ellipse cx="185" cy="118" rx="13" ry="7"/><ellipse cx="224" cy="95" rx="13" ry="7"/><ellipse cx="263" cy="73" rx="13" ry="7"/><ellipse cx="302" cy="50" rx="13" ry="7"/><ellipse cx="341" cy="28" rx="13" ry="7"/><ellipse cx="218" cy="137" rx="13" ry="7"/><ellipse cx="257" cy="114" rx="13" ry="7"/><ellipse cx="296" cy="92" rx="13" ry="7"/><ellipse cx="335" cy="69" rx="13" ry="7"/><ellipse cx="374" cy="47" rx="13" ry="7"/></g>
+          </g>
+          <g fill="none" stroke="#687b75" stroke-width="1.5" stroke-dasharray="5 5"><path d="M185 157v29m0 9v13M347 105v20"/></g>
+          <path d="m180 201 5 7 5-7" fill="none" stroke="#687b75" stroke-width="1.5"/>
+          <g font-family="monospace" font-size="12" fill="#496158"><text x="40" y="145">03</text><path d="M64 141h66" stroke="#a4aea3"/><text x="445" y="212">02</text><text x="51" y="288">01</text></g>
+        </svg>
+        <div class="art-caption"><span>ONE STEP IS A START.</span><strong>The whole build is the test.</strong></div>
+      </div>
+    </section>
+    <div class="proposal-notice wrap"><span class="small-label">WORK IN PROGRESS</span><p>This is a design proposal. The dataset, evaluator, and leaderboard are still to be built. Illustrations explain the idea; they are not model results.</p></div>
+
+    <section id="tasks" class="section wrap">
+      <div class="section-heading"><p class="eyebrow">01 / What we measure</p><h2>Read. Build. Repair.</h2><p>Three tasks expose different failures. Whole-build completion is the primary challenge; the other tracks help explain the result.</p></div>
+      <div class="track-grid">
+        <article class="track"><span class="track-num">A</span><h3>Next step</h3><p>Read a panel and place the new pieces onto a correct previous build.</p><dl><dt>Given</dt><dd>Instruction + verified prefix</dd><dt>Reveals</dt><dd>Part recognition and spatial grounding</dd></dl></article>
+        <article class="track featured"><span class="track-num">B</span><span class="small-label primary-label">PRIMARY TRACK</span><h3>Whole build</h3><p>Follow the complete manual, carrying your own build forward from page to page.</p><dl><dt>Given</dt><dd>Manual + inventory</dd><dt>Reveals</dt><dd>Planning, memory, and accumulated error</dd></dl></article>
+        <article class="track"><span class="track-num">C</span><h3>Repair</h3><p>Find an undisclosed mistake and fix it without disturbing correct work.</p><dl><dt>Given</dt><dd>Manual + a possibly incorrect build</dd><dt>Reveals</dt><dd>Diagnosis, restraint, and recovery</dd></dl></article>
+      </div>
+      <div class="explainer">
+        <div class="explainer-top"><div><p class="eyebrow">Inside a task</p><h3>Same pieces. Different demands.</h3></div><div class="mode-buttons" role="group" aria-label="Choose an example track"><button type="button" data-mode="step" aria-pressed="true">Next step</button><button type="button" data-mode="build" aria-pressed="false">Whole build</button><button type="button" data-mode="repair" aria-pressed="false">Repair</button></div></div>
+        <div class="example-grid"><div class="example-visual"><svg id="task-diagram" viewBox="0 0 380 240" role="img" aria-labelledby="diagram-title"><title id="diagram-title">Schematic: a verified base and supports, with the next beam to place.</title><g fill="none" stroke="#d5d9d2" stroke-width="1"><path d="M30 205h320M30 170h320M30 135h320M30 100h320M30 65h320M50 35v185M85 35v185M120 35v185M155 35v185M190 35v185M225 35v185M260 35v185M295 35v185M330 35v185"/></g><rect x="60" y="176" width="260" height="28" rx="3" fill="#64816a"/><g id="left-support" fill="#ca5c42"><rect x="89" y="118" width="57" height="58" rx="3"/><rect x="98" y="111" width="15" height="7" rx="2"/><rect x="122" y="111" width="15" height="7" rx="2"/></g><g id="right-support" fill="#ca5c42"><rect x="234" y="118" width="57" height="58" rx="3"/><rect x="243" y="111" width="15" height="7" rx="2"/><rect x="267" y="111" width="15" height="7" rx="2"/></g><g id="top-beam" fill="#46749b"><rect x="88" y="56" width="204" height="25" rx="3"/><rect x="100" y="49" width="18" height="7" rx="2"/><rect x="133" y="49" width="18" height="7" rx="2"/><rect x="166" y="49" width="18" height="7" rx="2"/><rect x="199" y="49" width="18" height="7" rx="2"/><rect x="232" y="49" width="18" height="7" rx="2"/><rect x="265" y="49" width="18" height="7" rx="2"/></g><path id="placement-arrow" d="M190 87v24m-5-6 5 6 5-6" stroke="#46749b" fill="none" stroke-width="2"/><rect id="error-outline" x="253" y="104" width="70" height="77" rx="5" fill="none" stroke="#a23524" stroke-width="2" stroke-dasharray="4 4" visibility="hidden"/></svg><span class="small-label">SCHEMATIC · NOT A SCORED CASE</span></div>
+        <div class="example-copy" aria-live="polite" aria-atomic="true"><span id="example-tag" class="small-label">A / NEXT STEP</span><h4 id="example-title">Place the beam.</h4><p id="example-body">The base and supports are correct. Read the instruction and predict the beam’s placement. This isolates one spatial decision.</p><div class="example-rule"><span>What we learn</span><p id="example-rule">Can the model infer the right position and orientation?</p></div></div></div>
+      </div>
+    </section>
+
+    <section id="corpus" class="section corpus-section">
+      <div class="wrap"><div class="section-heading"><p class="eyebrow">02 / Where the builds come from</p><h2>Real manuals.<br>Controlled challenges.</h2><p>We recommend both. Start with simple builds in each source, grow their difficulty together, and keep the results separate.</p></div>
+        <div class="source-grid"><article class="source-card"><span class="source-badge">REAL SETS</span><h3>Test the skill we care about.</h3><p>Actual manuals bring real page layouts, subtle part differences, camera changes, and subassembly callouts. They tell us whether the system works beyond our generator.</p><ul><li>Begin with small sets and short, clear manuals.</li><li>Verify every reference against the exact set and instructions.</li><li>Record public-data exposure and ambiguous placements.</li></ul><p class="source-question">Does it transfer to a real instruction book?</p></article><article class="source-card"><span class="source-badge blue">GENERATED BUILDS</span><h3>Find out why it fails.</h3><p>Original builds let us isolate a rotation, offset, quantity, or hidden connection. Fresh design families add challenges beyond familiar public sets.</p><ul><li>Change one factor at a time in matched tasks.</li><li>Validate labels independently of the generator.</li><li>Hold out templates and families, not only random seeds.</li></ul><p class="source-question">Which change breaks the model?</p></article></div>
+        <div class="paired-note"><span class="pair-symbol" aria-hidden="true">⇄</span><p><strong>The bridge between them: a paired transfer panel.</strong> Show the same held-out build through real and generated instructions. Compare whole-build outcomes; compare individual steps only when the states and operations align.</p></div>
+      </div>
+    </section>
+
+    <section id="curriculum" class="section wrap">
+      <div class="section-heading"><p class="eyebrow">03 / Start simple. Earn the next level.</p><h2>A ladder of reasoning.</h2><p>Difficulty follows what a build asks you to understand. Piece counts are guides; a ten-part mechanism can be harder than a hundred-part wall.</p></div>
+      <div class="curriculum-list">
+        <article><span class="level">00</span><div><h3>Foundations</h3><p>Counts, colors, direct stacking, right-angle rotations.</p></div><span class="pieces">5–20 pieces</span><span class="phase">Pilot</span></article>
+        <article><span class="level">01</span><div><h3>Small builds</h3><p>Several pages, asymmetric parts, offsets, changing viewpoints.</p></div><span class="pieces">20–60 pieces</span><span class="phase">Pilot</span></article>
+        <article><span class="level">02</span><div><h3>Subassemblies</h3><p>Nested callouts, repeated copies, mirrors, local-to-global placement.</p></div><span class="pieces">60–150 pieces</span><span class="phase later">Expansion</span></article>
+        <article><span class="level">03</span><div><h3>Hidden structure</h3><p>Occlusion, underside work, multiple supports, side studs.</p></div><span class="pieces">150–400 pieces</span><span class="phase later">Expansion</span></article>
+        <article><span class="level">04</span><div><h3>Mechanisms</h3><p>Pins, axles, hinges, articulation, and insertion dependencies.</p></div><span class="pieces">Variable</span><span class="phase later">Research</span></article>
+      </div><p class="caption">Proposed bands. Connector coverage and reference quality determine when a level is ready.</p>
+    </section>
+
+    <section id="protocol" class="section protocol-section"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">04 / What counts as success</p><h2>The right pieces.<br>In the right places.</h2><p>The main result is exact whole-build completion. Inventory, physical validity, instruction fidelity, and presentation remain separate dimensions.</p></div>
+      <div class="protocol-grid"><article><span class="metric-icon" aria-hidden="true">01</span><h3>Measure the whole object.</h3><p>One-to-one part matching, correct colors, symmetry-aware poses, and no extra or missing pieces. Report tolerant scores separately from exact completion.</p></article><article><span class="metric-icon" aria-hidden="true">02</span><h3>Keep the model’s mistakes.</h3><p>Whole-build runs carry predicted state forward. No correct-prefix resets. Record the first error, later repairs, and whether the system actually finishes.</p></article><article><span class="metric-icon" aria-hidden="true">03</span><h3>Make unknowns visible.</h3><p>Connections, collisions, support, and insertion each get pass, fail, or unknown. Physical verification includes its coverage; an unsupported check is not a pass.</p></article><article><span class="metric-icon" aria-hidden="true">04</span><h3>Declare the assistance.</h3><p>Separate model-only and tool-assisted runs. Log rendering, code, legal candidates, snapping, retries, tokens, elapsed time, and cost.</p></article></div>
+      <div class="protocol-foot"><strong>Test the test.</strong><p>Before model baselines, the scorer must reject duplicate-all answers, missing pieces, half-stud errors, wrong asymmetric rotations, and illegal connections. Real symmetries and equivalent instance orderings must pass.</p></div>
+    </div></section>
+
+    <section id="pilot" class="section wrap">
+      <div class="section-heading"><p class="eyebrow">05 / The first release</p><h2>Small enough to verify.<br>Varied enough to learn.</h2><p>A pilot concentrated in Foundations and Small Builds. Every number below is a proposed target, subject to reference verification.</p></div>
+      <div class="pilot-grid"><div><strong>12 + 12</strong><span>real + generated builds</span></div><div><strong>240</strong><span>diagnostic step tasks</span></div><div><strong>60</strong><span>repair cases, including 20 clean controls</span></div></div>
+      <ol class="roadmap"><li><span>First</span><strong>Freeze the protocol.</strong><p>Define inputs, budgets, splits, equivalences, and scorer regression cases.</p></li><li><span>Then</span><strong>Verify the pilot.</strong><p>Curate builds, align instructions, annotate evidence, and independently check references.</p></li><li><span>Next</span><strong>Run the baselines.</strong><p>Compare oracle candidates, random legal picks, a zero-shot model, and its tool-assisted version.</p></li><li><span>After</span><strong>Grow the challenge.</strong><p>Expand independent families, publish replayable failures, then add longer builds and mechanisms.</p></li></ol>
+      <p class="caption">The pilot validates the method. It is too small for confident fine-grained model rankings.</p>
+    </section>
+
+    <section id="models" class="section models-section wrap"><div class="section-heading"><p class="eyebrow">06 / Comparing different models</p><h2>One test.<br>Many model adapters.</h2><p>Every model receives the same task contract. A small adapter handles its API; a shared controller manages the build; an independent evaluator scores the saved result.</p></div>
+      <div class="runner-flow" aria-label="Runner architecture"><span>Frozen task packet</span><b aria-hidden="true">→</b><span>Model adapter</span><b aria-hidden="true">→</b><span>Actions &amp; assembly</span><b aria-hidden="true">→</b><span>Independent scorer</span></div>
+      <div class="runner-columns"><article><h3>Compare fairly.</h3><p>Pin model versions, prompts, images, budgets, and retry rules. Separate model-only runs from agents using the same renderer, candidates, and validator. Report success alongside cost and time.</p></article><article><h3>Run once. Rescore later.</h3><p>Save raw responses, actions, tool traces, and final predictions. Resume interrupted cases. When a scorer changes, reevaluate the saved outputs without paying for inference again.</p></article></div><a class="text-link" href="https://github.com/psoren/brickloop-benchmark/blob/main/RUNNER.md">Read the runner design <span aria-hidden="true">↗</span></a><p class="caption">Architecture proposal. Model adapters and the runner have not been implemented yet.</p>
+    </section>
+    <section id="related" class="section related-section wrap"><div class="section-heading"><p class="eyebrow">07 / Building on existing work</p><h2>A complementary test.</h2><p>LEGO reasoning and assembly benchmarks already exist. Our proposed emphasis is complete-manual reconstruction, accumulated error, and minimal repair.</p></div>
+      <div class="references"><a href="https://arxiv.org/abs/2606.05445"><span>BC-Bench / Brick-Composer</span><span>Part selection &amp; 3D pose <b aria-hidden="true">↗</b></span></a><a href="https://arxiv.org/abs/2503.19990"><span>LEGO-Puzzles</span><span>Visual reasoning &amp; planning <b aria-hidden="true">↗</b></span></a><a href="https://github.com/withtally/brickagi"><span>BrickAGI</span><span>Design &amp; buildability <b aria-hidden="true">↗</b></span></a><a href="https://arxiv.org/abs/2207.12572"><span>MEPNet</span><span>Manuals to executable plans <b aria-hidden="true">↗</b></span></a><a href="https://arxiv.org/abs/2410.01111"><span>InstructioNet</span><span>Sequential reconstruction <b aria-hidden="true">↗</b></span></a><a href="https://arxiv.org/abs/2604.22984"><span>BrickNet</span><span>Connectivity-based generation <b aria-hidden="true">↗</b></span></a><a href="https://eng.snap.com/spatial_intelligence"><span>Snap Spatial Benchmark</span><span>Structured spatial evaluation <b aria-hidden="true">↗</b></span></a></div>
+    </section>
+
+    <section class="closing wrap"><p class="eyebrow">An open design, before a leaderboard</p><h2>Let’s make the failures<br><em>worth learning from.</em></h2><p>The first builds, numeric tolerances, part vocabulary, resource budgets, and human-baseline protocol are still open decisions. The full draft records the proposed defaults and the work needed to validate them.</p><div class="hero-actions"><a class="button primary" href="https://github.com/psoren/brickloop-benchmark/blob/main/PROPOSAL.md">Read the full proposal <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/psoren/brickloop-benchmark/issues">Discuss the design <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="wrap"><span class="footer-brand">brickloop / benchmark</span><p>Independent research proposal · September 2026<br>LEGO is a trademark of the LEGO Group. This project is not affiliated with or endorsed by the LEGO Group.</p><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
